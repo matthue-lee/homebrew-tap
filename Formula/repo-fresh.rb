@@ -36,9 +36,9 @@ class RepoFresh < Formula
         repo-fresh status
         repo-fresh run
 
-      Prefer a custom schedule (a different hour, or an interval)? Use the
-      bundled installer instead of `brew services`:
-        #{opt_libexec}/install.sh
+      The Homebrew install runs on a fixed daily 07:00 schedule. For a custom
+      hour or interval, install from source instead of Homebrew (see the
+      README) — use one method, not both, or two schedulers would double up.
     EOS
   end
 
