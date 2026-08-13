@@ -21,6 +21,9 @@ class RepoFresh < Formula
     run [opt_libexec/"repo-fresh.sh"]
     run_type :cron
     cron "0 7 * * *"
+    # Homebrew defaults RunAtLoad to true; keep it off so sweeps happen only on
+    # the schedule or via `repo-fresh run`, never silently on login/start.
+    run_at_load false
   end
 
   def caveats
