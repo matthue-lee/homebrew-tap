@@ -1,8 +1,8 @@
 class RepoFresh < Formula
   desc "Keep local git repos fast-forwarded to their upstreams on a schedule"
   homepage "https://github.com/matthue-lee/repo-fresh"
-  url "https://github.com/matthue-lee/repo-fresh/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "effddd67b90d51a297d9b3d36b3ac91999f802f9420b6a557ba5841db80f0880"
+  url "https://github.com/matthue-lee/repo-fresh/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "0169a1d125f62165a6c84ee7d261842f7d721a2c0ac69f055791dfdaca7a7016"
   license "MIT"
 
   depends_on :macos
@@ -21,6 +21,7 @@ class RepoFresh < Formula
     run [opt_libexec/"repo-fresh.sh"]
     run_type :cron
     cron "0 7 * * *"
+    run_at_load true
   end
 
   def caveats
